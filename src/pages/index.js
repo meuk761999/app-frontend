@@ -4,18 +4,21 @@ import Banner from '@/components/Banner'
 import Cards from '@/components/Cards';
 import { ClickButton } from '@/components/Buttons';
 import CardsNeighbour from '@/components/CardsNeighbour';
+import AnimatedTextBanner from '@/components/AnimatedTextBanner';
+// import Carousel from '@/components/Carousal';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
       <div
-        className={`flex flex-col items-center justify-between py-24 ${inter.className}`}
+        className={`flex flex-col items-center justify-between py-12 ${inter.className}`}
       >
-        <Banner></Banner>
+        {/* <Banner></Banner> */}
+        <AnimatedTextBanner/>
       </div>
       <main
-        className={`flex flex-col items-center justify-between p-24 pt-0 ${inter.className}`}
+        className={`flex flex-col items-center justify-between p-12 pt-0 ${inter.className}`}
       >
         {/* <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"

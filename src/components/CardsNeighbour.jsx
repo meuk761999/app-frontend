@@ -13,7 +13,7 @@ const CardsNeighbour = () => {
                 </p>
                 <div className='w-full h-1 rounded bg-gradient-to-r from-purple-900 via-pink-900 to-black'></div>
                 <p className=" break-words text-sm sm:text-xl font-thin py-4 ">
-                             We stand out with our world class serivice and unparallel expertise.
+                <span className='font-bold text-violet-900 text-3xl'>Xenture</span> brings over 7 years of experience in the FinTech sector, a solid track record, and enduring integration background in enterprise-grade projects to our client's disposal
                 </p>
                 <ClickButton/>
              </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowDropDown } from '../../public/icons/Icons';
+import Image from 'next/image';
 
 const Header = () => {
   return (
