@@ -1,15 +1,33 @@
 import React from 'react';
+import { useEffect,useState } from 'react';
 import Link from 'next/link';
 import { ArrowDropDown } from '../../public/icons/Icons';
 import Image from 'next/image';
+import { UnderlineForNavOptions } from './Misc';
 
 const Header = () => {
+  const [scrolling, setScrolling] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
        {/* <div className=' h-8 bg-white'>
 
        </div> */}
-<nav className="bg-gradient-to-r from-black via-violet-900 to-purple-900 fixed w-full z-50 ">
+<nav className={` ${scrolling?"bg-black":"bg-gradient-to-r from-black via-violet-900 to-purple-900"}  transition-all ease-in-out duration-1000 fixed w-full z-50`} >
   <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div className="relative flex h-16 items-center justify-between">
       <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -41,25 +59,32 @@ const Header = () => {
         </div>
         <div className='w-full hidden sm:flex justify-center'>
           <div className='flex w-3/6 justify-around'>
-            <div className='flex select-none hover:text-gray-400 transition ease-in-out duration-300'>
+            <div className='flex select-none group hover:text-gray-400 transition ease-in-out duration-300'>
                 <div className='h-full text-center' >
-                <Link href="/" className=' underline'>Who we are </Link>
+                <Link href="/" className=' '>Who we are
+                <UnderlineForNavOptions scrolling={scrolling}/>
+                 </Link>
+                </div>
+                <div className='h-full w-8 flex items-center'>
+                    <ArrowDropDown/>
+                </div>
+                
+            </div>
+            <div className='flex select-none group hover:text-gray-400 transition ease-in-out duration-300'>
+                <div className='h-full text-center' >
+                <Link href="/" className=' '>Who we do 
+                <UnderlineForNavOptions scrolling={scrolling}/>
+                </Link>
                 </div>
                 <div className='h-full w-8 flex items-center'>
                     <ArrowDropDown/>
                 </div>
             </div>
-            <div className='flex select-none hover:text-gray-400 transition ease-in-out duration-300'>
+            <div className='flex select-none group hover:text-gray-400 transition ease-in-out duration-300'>
                 <div className='h-full text-center' >
-                <Link href="/" className=' underline'>Who we do </Link>
-                </div>
-                <div className='h-full w-8 flex items-center'>
-                    <ArrowDropDown/>
-                </div>
-            </div>
-            <div className='flex select-none hover:text-gray-400 transition ease-in-out duration-300'>
-                <div className='h-full text-center' >
-                <Link href="/" className=' underline'>Join Us</Link>
+                <Link href="/" className=' '>Join Us
+                <UnderlineForNavOptions scrolling={scrolling}/>
+                </Link>
                 </div>
             </div>
             
@@ -80,9 +105,9 @@ const Header = () => {
   {/* Mobile menu, show/hide based on menu state. */}
   {/* <div className="sm:hidden" id="mobile-menu">
     <div className="space-y-1 px-2 pb-3 pt-2">
-      <Link href="#" className="  text-white block rounded-md px-3 py-2 text-base font-medium underline" aria-current="page">What we do</Link>
-      <Link href="#" className="text-gray-300 hover:bg-gray-300 bg-opacity-10 hover:text-white block rounded-md px-3 py-2 text-base font-medium underline">Who we are</Link>
-      <Link href="#" className="text-gray-300 hover:bg-gray-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium underline">Join Us</Link>
+      <Link href="#" className="  text-white block rounded-md px-3 py-2 text-base font-medium " aria-current="page">What we do</Link>
+      <Link href="#" className="text-gray-300 hover:bg-gray-300 bg-opacity-10 hover:text-white block rounded-md px-3 py-2 text-base font-medium ">Who we are</Link>
+      <Link href="#" className="text-gray-300 hover:bg-gray-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium ">Join Us</Link>
 
     </div>
   </div> */}

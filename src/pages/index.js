@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <>
       <div
-        className={`flex flex-col items-center justify-between py-12 ${inter.className}`}
+        className={`flex flex-col items-center justify-between py-12  ${inter.className}`}
       >
         {/* <Banner></Banner> */}
         <AnimatedTextBanner/>
       </div>
       <main
-        className={`flex flex-col items-center justify-between p-12 pt-0 ${inter.className}`}
+        className={`flex flex-col items-center justify-between p-12 pt-0  ${inter.className}`}
       >
         {/* <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
@@ -67,7 +67,7 @@ export default function Home() {
           
         </div>
         
-        <div className='w-full h-1 rounded bg-gradient-to-r from-black via-pink-900 to-black'></div>
+        {/* <div className='w-full h-1 rounded bg-gradient-to-r from-black via-pink-900 to-black'></div> */}
       </main>
     </>
   );

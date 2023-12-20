@@ -4,7 +4,7 @@ import { ClickButton } from './Buttons';
 
 const CardsNeighbour = () => {
   return (
-    <div className='bg-gradient-to-tr from-purple-950 via-pink-900 to-violet-950
+    <div className='bg-gradient-to-tr from-purple-950 via-pink-900 to-violet-950 
                           p-2 w-full h-full  group hover:scale-105 hover:rounded-3xl group duration-500 overflow-hidden'>
             <div className='w-full h-full bg-black p-6 m-0  group-hover:rounded-2xl group groups duration-500 overflow-hidden'>
                 <p className=" overflow-hidden whitespace-nowrap pb-2

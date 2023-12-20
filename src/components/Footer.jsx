@@ -1,150 +1,155 @@
 import React from "react";
 import Link from "next/link";
+import { UnderlineForFooterOptions ,UnderlineForNavOptions } from "./Misc";
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black border-t-2 border-purple-600">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-          <div className="md:flex md:justify-between">
-            <div className="mb-6 md:mb-0">
-              <Link href="https://flowbite.com/" className="flex items-center">
-                <img
-                  className="h-8 me-3"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Your Company"
-                />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  Xenture
-                </span>
+ 
+
+{/* Footer Start */}
+<footer className=" bg-transparent  relative text-white ">
+  <div className="container mx-auto px-6">
+    <div className="grid grid-cols-12">
+      <div className="col-span-12">
+        <div className="py-[60px] px-0">
+          <div className="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
+            <div className="lg:col-span-4 md:col-span-12">
+              <Link href="#" className="text-[22px] focus:outline-none">
+                <img className="h-12" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt />
               </Link>
+              <p className="mt-6 text-gray-300 break-words">
+              Our commitment to innovation and excellence empowers businesses to thrive in the digital era. 
+                 Join us in shaping the future of technology, where possibilities are limitless, and success
+                is inevitable. Elevate your IT experience with Xenture – where expertise meets innovation.
+              </p>
+              <ul className="list-none mt-6">
+                <li className="inline">
+                  <Link href="#" className="font-semibold tracking-wide align-middle transition duration-300 ease-in-out p-1 h-9 w-9 inline-flex items-center text-center justify-center text-sm border !border-gray-800 rounded-md hover:border-blue-700  hover:bg-blue-700 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 fill-gray-300" viewBox="0 0 24 24">
+                      <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                    </svg>
+                  </Link>
+                </li>
+                <li className="inline group">
+                  <Link href="#" className="font-semibold tracking-wide align-middle transition duration-300 ease-in-out p-1 h-9 w-9 inline-flex items-center text-center justify-center text-sm border !border-gray-800 rounded-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 fill-white group-hover:fill-blue-500" viewBox="0 0 24 24">
+                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                    </svg>
+                  </Link>
+                </li>
+                <li className="inline">
+                  <Link href="#" className="font-semibold tracking-wide align-middle transition duration-300 ease-in-out p-1 h-9 w-9 inline-flex items-center text-center justify-center text-sm border !border-gray-800 rounded-md hover:border-yellow-600  hover:bg-blue-500 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 fill-gray-300" viewBox="0 0 24 24">
+                      <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                    </svg>
+                  </Link>
+                </li>
+                <li className="inline">
+                  <Link href="#" className="font-semibold tracking-wide align-middle transition duration-300 ease-in-out p-0 h-9 w-9 inline-flex items-center text-center justify-center text-sm border !border-gray-800 rounded-md hover:bg-pink-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 fill-gray-300" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                  </Link>
+                </li>
+              </ul>
+              {/*end icon*/}
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-              <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Heading
-                </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className=" group mb-4">
-                  <Link href="#" className="text-white group-hover:text-gray-400 transition ease-in-out duration-300">
-                      Link
+            {/*end col*/}
+            <div className="lg:col-span-2 md:col-span-4">
+              <h5 className="tracking-[1px] text-gray-100 font-semibold">
+                Company
+              </h5>
+              <ul className="list-none  mt-6">
+                <li className="">
+                  <Link href="#" className="text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out">
+                   About us
                     </Link>
-                  </li>
-                  <li className=" group">
-                  <Link href="#" className="text-white group-hover:text-gray-400 transition ease-in-out duration-300">
-                      Link
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Follow us
-                </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className=" group mb-4">
-                  <Link href="#" className="text-white group-hover:text-gray-400 transition ease-in-out duration-300">
-                      Link
-                    </Link>
-                  </li>
-                  <li className=" group">
-                  <Link href="#" className="text-white group-hover:text-gray-400 transition ease-in-out duration-300">
-                      Link
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Legal
-                </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                  <li className=" group mb-4">
-                  <Link href="#" className="text-white group-hover:text-gray-400 transition ease-in-out duration-300">
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li className="group">
-                    <Link href="#" className="text-white group-hover:text-gray-400 transition ease-in-out duration-300">
-                      Terms &amp; Conditions
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+                </li>
+                <li className="mt-[10px]">
+                  <Link href="#" className="text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out">
+                    Services</Link>
+                </li>
+                <li className="mt-[10px]">
+                  <Link href="#" className="text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out">
+                    Pricing</Link>
+                </li>
+                <li className="mt-[10px]">
+                  <Link href="#" className="text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out">
+                    Blog</Link>
+                </li>
+              </ul>
             </div>
+            {/*end col*/}
+            <div className="lg:col-span-3 md:col-span-4">
+              <h5 className="tracking-[1px] text-gray-100 font-semibold">
+                Important Links
+              </h5>
+              <ul className="list-none  mt-6">
+                <li>
+                  <Link href="#" className="text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out">
+                    Terms of Services</Link>
+                </li>
+                <li className="mt-[10px]">
+                  <Link href="#" className="text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out">
+                    Privacy Policy</Link>
+                </li>
+                <li className="mt-[10px]">
+                  <Link href="#" className="text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out">
+                    Documentation</Link>
+                </li>
+              </ul>
+            </div>
+            {/*end col*/}
+            <div className="lg:col-span-3 md:col-span-4">
+              <h5 className="tracking-[1px] text-gray-100 font-semibold">
+                Newsletter
+              </h5>
+              <p className="mt-6">
+                Sign up and receive the latest tips via email.
+              </p>
+              <form>
+                <div className="grid grid-cols-1">
+                  <div className=" my-3">
+                    <label className="form-label">Write your email
+                      <span className="text-red-600">*</span></label>
+                    <div className="relative mt-2">
+                      <input type="email" className="w-full py-2 px-3   rounded h-10 outline-none bg-transparent rounded-t-sm rounded-r-none rounded-b-none rounded-l-sm outline-0 border border-gray-800/90 text-gray-100  focus:shadow-none focus:border-gray-800/90" placeholder="Email" name="email" required />
+                    </div>
+                  </div>
+                  <button type="submit" id="submitsubscribe" name="send" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle transition duration-300 ease-in-out text-base text-center  hover:bg-gray-950 hover:text-gray-300 border-white  ">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+            {/*end col*/}
           </div>
-          <hr className="my-6 sm:mx-auto border-purple-900 lg:my-8" />
-          <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm text-white sm:text-center">
-              © 2023 &nbsp;
-              <Link href="https://flowbite.com/" className="hover:underline">
-                Xenture
-              </Link>
-              . All Rights Reserved.
-            </span>
-            <div className="flex mt-4 sm:justify-center sm:mt-0">
-              <Link
-                href="#"
-                className="text-white hover:text-gray-400 transition ease-in-out duration-300"
-              >
-                <svg
-                  className="w-4 h-4"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 8 19"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="sr-only">Facebook page</span>
-              </Link>
-              <Link
-                href="#"
-                className="text-white hover:text-gray-400 transition ease-in-out duration-300 ms-5"
-              >
-                <svg
-                  className="w-4 h-4"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 17"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="sr-only">Twitter page</span>
-              </Link>
-             
-              <Link
-                href="#"
-                className="text-white hover:text-gray-400 transition ease-in-out duration-300 ms-5"
-              >
-                <svg
-                  className="w-4 h-4"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="sr-only">Dribbble account</span>
-              </Link>
-            </div>
-          </div>
+          {/*end grid*/}
         </div>
-      </footer>
+        {/*end col*/}
+      </div>
+    </div>
+    {/*end grid*/}
+  </div>
+  {/*end container*/}
+  <div className="py-7 px-0 border-t border-white">
+    <div className="container mx-auto px-6 text-center">
+      <div className="grid md:grid-cols-2 items-center">
+        <div className="md:text-left text-center">
+          <p className="mb-0">
+            ©
+            Xenture Team
+          </p>
+        </div>
+      </div>
+      {/*end grid*/}
+    </div>
+    {/*end container*/}
+  </div>
+</footer>
+{/*end footer*/}
+
     </>
   );
 };
