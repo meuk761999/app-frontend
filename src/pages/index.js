@@ -5,6 +5,7 @@ import Cards from '@/components/Cards';
 import { ClickButton } from '@/components/Buttons';
 import CardsNeighbour from '@/components/CardsNeighbour';
 import AnimatedTextBanner from '@/components/AnimatedTextBanner';
+import Testimonial from '@/components/Testimonial';
 // import Carousel from '@/components/Carousal';
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,7 @@ export default function Home() {
         className={`flex flex-col items-center justify-between py-12  ${inter.className}`}
       >
         {/* <Banner></Banner> */}
-        <AnimatedTextBanner/>
+        {/* <AnimatedTextBanner/> */}
       </div>
       <main
         className={`flex flex-col items-center justify-between p-12 pt-0  ${inter.className}`}
@@ -48,7 +49,7 @@ export default function Home() {
           </p>
         </div>
         
-        <div className='py-24 grid grid-cols-5 gap-10'>
+        <div className='py-24 block sm:grid grid-cols-5 gap-10'>
           <div className='col-start-1 col-end-3'>
             <Cards/>
           </div>
@@ -66,6 +67,11 @@ export default function Home() {
           </div>
           
         </div>
+
+        <div className='pb-24 pt-0'>
+        <Testimonial/>
+        </div>
+
         
         {/* <div className='w-full h-1 rounded bg-gradient-to-r from-black via-pink-900 to-black'></div> */}
       </main>
