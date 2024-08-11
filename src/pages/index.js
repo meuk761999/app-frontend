@@ -15,7 +15,7 @@ export default function Home() {
       <div
         className={`flex flex-col items-center justify-between py-12  ${inter.className}`}
       >
-        {/* <Banner></Banner> */}
+        <Banner></Banner>
         {/* <AnimatedTextBanner/> */}
       </div>
       <main
